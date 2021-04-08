@@ -1,4 +1,4 @@
-//搜索插入位置， leetcode第35题
+//leetcode第35题, 给定一个有序的数组，和一个目标数，搜索插入位置
 public class No35 {
 
     public static void main(String[] args) {
