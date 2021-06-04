@@ -1,9 +1,6 @@
 package 二叉树;
 
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * 给你二叉树的根节点 root ，返回它节点值的 前序 遍历。
@@ -76,5 +73,24 @@ public class No144 {
         return res;
     }
 
+    public static List<Integer> preOrderIteration(TreeNode head) {
+        List<Integer> res = new ArrayList<>();
+        if (head == null) {
+            return res;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(head);
+        while (!stack.isEmpty()) {
+            TreeNode top = stack.pop();
+            res.add(top.val);
+            if (top.right != null) {
+                stack.push(top.right);
+            }
+            if (top.left != null) {
+                stack.push(top.left);
+            }
+        }
+        return res;
+    }
 
 }
