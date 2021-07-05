@@ -55,5 +55,8 @@ public class No106 {
         root.right = helper(index + 1, right);  //构造右子树
         root.left = helper(left, index - 1);   //构造左子树
         return root;
+
     }
+
+
 }
