@@ -46,6 +46,10 @@ public class No216 {
     }
 
     public void backtracking2(int k, int n, int start) {
+        //剪枝
+        if (temp.size() + (n - start + 1) < k || temp.size() > k) {
+            return;
+        }
         if (temp.size() == k) {
             int tempSum = 0;
             for (Integer a : temp) {
